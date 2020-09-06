@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Login form</title>
+<script type="text/javascript">
+function validate()
+{
+ var username=document.getElementById("username");
+ var password=document.getElementById("password");
+
+ if (username.value.trim() =="" )
+ {
+  alert("Username cannot be blank!");
+  return false;
+ }
+else if (password.value.trim() =="" )
+ {
+  alert("Password cannot be blank!");
+  password.focus();
+  return false;
+ }
+else if (password.value.trim().length<5 )
+ {
+  alert("Password must be atleast 4 digits");
+  return false;
+ }
+else
+{
+ return true;
+}
+
+}
+</script>
+<link rel="stylesheet" type="text/css" href="login.css">
+<style>
+body{
+background-image:url("note1.jpg");
+background-repeat:no-repeat;
+background-size: 70% 115%;
+background-position:center;
+
+}
+</style>
+</head>
+<body>
+<div class="loginbox">
+<!-- <img src="logo.jpg" alt="avatar" class="logo"> -->
+
+<h1>Login here</h1>
+<form onsubmit="return validate()" action="booking.html">
+<p>Username</p>
+<input type="text" id="username" placeholder=" Enter Username">
+<p>Password</p>
+<input type="Password" id="password" placeholder=" Enter Password"><br><br>
+
+<input type="submit" id="" value="Login"><br>
+<a href="password.html">Forgot password?</a><br><br>
+<a href="signin.html">Don't have an account?</a>
+</form>
+</div>
+</body>
+</html>

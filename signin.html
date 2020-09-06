@@ -1,0 +1,119 @@
+<html>
+<head>
+<title>Sign up form</title>
+<script type="text/javascript">
+
+
+function validate()
+{
+ var username=document.getElementById("username");
+ var mobileno=document.getElementById("mobileno");
+ var email=document.getElementById("email");
+ var password=document.getElementById("password");
+ var confirmpassword=document.getElementById("confirmpassword");
+//alert(password.value);
+//alert(confirmpassword.value);
+if(fullname.value.trim()=="")
+{
+
+  alert("Name cannot be blank!");
+  return false;
+}
+else if (username.value.trim() =="" )
+ {
+  
+  alert("Username cannot be blank!");
+  return false;
+ }
+else if (mobileno.value.trim()=="" )
+ {
+ 
+  alert("Mobile number cannot be blank!");
+  return false;
+ }
+else if (mobileno.value.length!=10 )
+ {
+alert("Enter valid mobile number!");
+  password.focus();
+  return false;
+ }
+else if (email.value.trim()=="" )
+ {
+
+  alert("Email cannot be blank!");
+  return false;
+ }
+else if (password.value.trim()=="" )
+ {
+ alert("Password cannot be blank!");
+  password.focus();
+  return false;
+ }
+else if (password.value.trim().length<4 )
+ {
+alert("Password must be atleast 4 characters!");
+  password.focus();
+  return false;
+ }
+else if (confirmpassword.value.trim()=="")
+ {
+alert("Confirm your Password!");
+  password.focus();
+return false;
+ }
+else if(password.value!=confirmpassword.value)
+{
+alert("Passwords don't match!");
+password.focus();
+return false;
+}
+else
+{
+ return true;
+}
+
+}
+
+</script>
+<style>
+body{
+background-image:url("4.png");
+background-repeat:no-repeat;
+background-position:left;
+}
+</style>
+<body>
+<link rel="stylesheet" type="text/css" href="signin.css">
+<div class="signinbox">
+
+<img src="logo.jpg" class="logo">
+<h1>Sign up</h1>
+<form onsubmit="return validate()" action="index.html">
+<p>Full name</p>
+<input type="text" id="fullname" placeholder=" Enter Full name"><br><br>
+<p>Username</p>
+<input type="text" id="username" placeholder=" Enter Username"><br><br>
+
+
+<p>Mobile no.</p>
+<input type="number" id="mobileno" placeholder="Enter Mobile Number"/><br><br>
+
+<p>Email I'd</p>
+<input type="email" id="email" placeholder="Enter mail I'd"><br><br>
+
+
+<p>Password</p>
+<input type="Password" id="password" placeholder=" Enter Password"><br><br>
+<p>Confirm Password</p>
+<input type="Password" id="confirmpassword" placeholder="Confirm your Password"><br><br>
+
+
+<br><input type="submit" id="" value="Create account"><br><br>
+<a href="google.html">&nbsp Sign in with Google</a><br><br>
+<a href="login.html">&nbsp Already have an account?</a>
+
+</form>
+</div>
+</body>
+</head>
+</html>

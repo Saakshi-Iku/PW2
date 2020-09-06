@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>Google form</title>
+<script type="text/javascript">
+function validate()
+{
+ var email=document.getElementById("email");
+ var password=document.getElementById("password");
+
+ if (email.value.trim() =="" )
+ {
+  alert("Email cannot be blank!");
+  return false;
+ }
+else if (password.value.trim() =="" )
+ {
+  alert("Password cannot be blank!");
+  password.focus();
+  return false;
+ }
+
+else
+{
+ return true;
+}
+
+}
+</script>
+<link rel="stylesheet" type="text/css" href="google.css">
+<style>
+body{
+background-image:url("note1.jpg");
+background-repeat:no-repeat;
+background-size: 70% 115%;
+background-position:center;
+}
+</style>
+</head>
+<body>
+<div class="loginbox">
+<img src="logo.jpg" class="logo">
+<h1>Sign in</h1>
+<form onsubmit="return validate()" action="index.html">
+<p>Email</p>
+<input type="email" id="email" placeholder=" Enter Email">
+<p>Password</p>
+<input type="Password" id="password" placeholder=" Enter Password"><br><br>
+
+<input type="submit" id="" value="Sign in"><br>
+
+</form>
+</div>
+</body>
+</html>

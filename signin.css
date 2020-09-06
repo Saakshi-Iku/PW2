@@ -1,0 +1,96 @@
+
+.signinbox
+{
+ width: 420px;
+ height: 620px;
+ background: rgba(0.5,0.5,0.7,0.7);
+ top: 53%;
+ left: 70%;
+ position: absolute;
+ transform: translate(-50%,-50%);
+ box-sizing: border-box;
+ padding: 1px 6px;
+ color: white;
+ border-radius: 10px;
+ padding-left: 30px;
+}
+
+.logo
+{
+ width: 130px;
+ height: 130px;
+ border-radius: 50%;
+ position: absolute;
+ top: -8%;
+ left:calc(105% - 80px);
+}
+
+h1
+{
+ margin:0;
+ padding: 0 0 0px;
+ text-align: center;
+ font-size: 35px;
+}
+
+.signinbox p
+{
+ margin: 0;
+ padding:0 15px;
+ font-weight: bold;
+ font-size: 18px;
+ color:#ffc107;
+}
+
+.signinbox input{
+ width: 80%;
+
+ margin: auto;
+ padding:14 30px;
+
+}
+
+.signinbox input[type="text"], input[type="password"], input[type="number"], input[type="email"]
+{
+ border-color: #696969;
+ border-width: 2px;
+ border-style: solid;
+ background: transparent;
+ outline: none;
+ height: 20px;
+ color:#fff;
+ font-size: 18px;
+ border-radius: 10px;
+ alignment: center;
+
+}
+
+.signinbox input[type="submit"]
+{
+ border: none;
+ outline: none;
+ height: 40px;
+ background:  #ffc107;
+ color: #fff;
+ font-size: 18px;
+ border-radius: 20px;
+}
+
+.signinbox input[type="submit"]:hover
+{
+ cursor: pointer;
+ background:yellow;
+ color: black;
+}
+
+.signinbox a
+{
+ text-decoration: none;
+ font-size: 20px;
+ color: #ffc107;
+ }
+
+.signinbox a:hover
+{
+ color: yellow;
+}

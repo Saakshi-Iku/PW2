@@ -1,0 +1,33 @@
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #1a1a1a;
+  margin:1px;
+  pre{tab-size: 16;}
+
+}
+
+
+.tab a {
+  background-color: inherit;
+  float: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 20px 50px;
+  transition: 0.3s;
+  font-size: 17px;
+  color:#fff;
+}
+
+.tab a:hover {
+  color: yellow;
+}
+.app-picture {
+width:480px;
+height:500px;
+padding-right:300px;
+}
+#pic{
+float:right;
+}

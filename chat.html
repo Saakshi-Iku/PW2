@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat-box</title>
+    <link rel="stylesheet" href="chatBox.css" />
+  </head>
+  <body>
+    <div class="chatBox">
+      <div class="chatLog" onclick="myFn()">
+        <div class="chatU">
+          <div class="profilePic"><img src="images5.jpg" /></div>
+          <div class="chatMessage">
+            <p>Hello!!! Whats Up???</p>
+          </div>
+        </div>
+        <div class="chatOthers">
+          <div class="profilePic"><img src="images2.jpg" /></div>
+          <div class="chatMessage">
+            <p>
+              Hello!!This is saakshi,Can we take an auto from National College Metro Station to our college.I am standing near the metro station.Let's meet there and find an auto.
+            </p>
+          </div>
+        </div>
+
+        <div class="chatU">
+          <div class="profilePic"><img src="pp1.jpg" /></div>
+          
+        </div>
+      </div>
+      <div class="chatForm">
+        <textarea id="text"></textarea>
+        <button id="sendbtn" onclick="myfn()">send</button>
+      </div>
+    </div>
+    <script>
+
+      var send=document.getElementById("sendbtn");
+      var chatLog=document.querySelector(".chatLog");
+      
+
+      function myfn()
+      { var x=document.querySelector("#text").value;
+        chatLog.innerHTML+="<p>hello</p>";
+
+        
+
+      }
+
+    </script>
+  </body>
+</html>
