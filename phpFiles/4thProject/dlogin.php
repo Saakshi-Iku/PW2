@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
  		<title></title>
  		<style>
  			body{
@@ -29,7 +30,7 @@ height:750px;
 }
 .loginbox1 {
  width: 360px;
- height: 470px;
+ height: 500px;
  background:#000000;
  /*background: rgba(0.5,0.5,0.7,0.7);*/
  top: 52%;
@@ -66,7 +67,7 @@ margin: 0;
  outline: none;
  height: 23px;
  color:white;
- font-size: 18px;
+ font-size: 13px;
  border-radius: 10px;
  padding: 0 5px;
 }
@@ -194,7 +195,7 @@ h1
  border-style: solid;
  background: transparent;
  outline: none;
- height: 21px;
+ height: 23px;
  color:white;
  font-size: 13px;
  border-radius: 10px;
@@ -282,10 +283,10 @@ h1
 
 						<select class="select" name="location", size="1">
   						<option value="METRO">National College Metro Station</option>
-  						<option value="Ashram">Ramakrishna Ashram</option>
-  						<option value="BMSCE">BMS College of Engineering</option>
-  						<option value="BMSCA">BMS College of Architecture</option>
-  						<option value="BMSCL">BMS College of Law</option>
+  						<option value="RKA">Ramakrishna Ashram</option>
+  						<option value="BMS">BMS College of Engineering</option>
+  						<option value="BMS">BMS College of Architecture</option>
+  						<option value="BMS">BMS College of Law</option>
   						
 						</select><br><br>
 							

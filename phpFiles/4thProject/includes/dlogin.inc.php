@@ -7,12 +7,27 @@ if (isset($_POST['login-submit'])) {
 	$mailuid = $_POST['mailuid'];
 	$password = $_POST['pwd'];
 	$location = $_POST['location'];
+	echo "mail :$mailuid";
+	echo "location: $location";
 
 	if (empty($mailuid) || empty($password || empty($location))) {
 		header("Location: ../dindex.php?error=emptyfields");
 		exit();
 	}
 	else {
+		// $sql = "UPDATE DRIVER_DETAILS
+		// 		SET LOCATION=$location
+		// 		WHERE DRIVER_ID=".$mailuid ."OR EMAIL=$mailuid;";
+				if ($conn->query(
+					 "UPDATE DRIVER_DETAILS 
+                      SET LOCATION =  '$location'
+                      WHERE DRIVER_ID= '$mailuid' OR EMAIL='$mailuid'"
+				) === TRUE) {
+				  echo "Record updated successfully";
+				} else {
+				  echo "Error updating record: " . $conn->error;
+				}
+				
 		$sql = "SELECT * FROM DRIVER_DETAILS WHERE DRIVER_ID=? OR EMAIL=?;";
 		$stmt = mysqli_stmt_init($conn);
 		if (!mysqli_stmt_prepare($stmt, $sql)) {

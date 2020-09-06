@@ -2,7 +2,7 @@
 <html>
 <head>
 
-	
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<title></title>
 	<style >
 		
@@ -66,7 +66,7 @@
 			 outline: none;
 			 height: 23px;
 			 color:white;
-			 font-size: 18px;
+			 font-size: 13px;
 			 border-radius: 10px;
 			 padding: 0 5px;
 			}
@@ -196,7 +196,7 @@
 			 border-style: solid;
 			 background: transparent;
 			 outline: none;
-			 height: 21px;
+			 height: 23px;
 			 color:white;
 			 font-size: 13px;
 			 border-radius: 10px;
