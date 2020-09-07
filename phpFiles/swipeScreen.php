@@ -34,6 +34,12 @@ session_start();
     // echo $_POST['drop'];
     // echo $_POST['userid'];
 
+    if($_POST['pickup']==$_POST['drop']){
+      header("Location: http://localhost/projectLabFinal1/phpFiles/4thProject/index.php?error=samepickupdrop");
+    }
+    if(($_POST['pickup']==NULL)||($_POST['drop']==NULL)){
+      header("Location: http://localhost/projectLabFinal1/phpFiles/4thProject/index.php?error=nullattributes");
+    }
 
     $sqlupdate = "UPDATE user_details 
                   SET PICKUP='{$_POST['pickup']}',
