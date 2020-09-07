@@ -1,11 +1,8 @@
-<?php
-	session_start();
-?>
 <!DOCTYPE html>
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
- 		<title></title>
+ 		<title>password</title>
  		<style>
  			body{
 background-image: url("bg1.png");
@@ -30,7 +27,7 @@ height:750px;
 }
 .loginbox1 {
  width: 360px;
- height: 560px;
+ height: 450px;
  background:#000000;
  /*background: rgba(0.5,0.5,0.7,0.7);*/
  top: 52%;
@@ -55,7 +52,7 @@ margin: 0;
 .loginbox1 input{
  width: 100%;
  margin-bottom: 10px;
- padding: 5px;
+ padding: 10px;
 }
 
 .loginbox1 input[type="text"], input[type="number"], input[type="password"], input[type="email"]
@@ -65,9 +62,9 @@ margin: 0;
  border-style: solid;
  background: transparent;
  outline: none;
- height: 23px;
+ height: 33px;
  color:white;
- font-size: 13px;
+ font-size: 17px;
  border-radius: 10px;
  padding: 0 5px;
 }
@@ -241,8 +238,8 @@ h1
 	<body>
 
 		<header>
-			<!--<nav>-->
-				<!-- <a href="index.php">
+			<!--<nav>
+				<a href="index.php">
 					
 				</a>
 				<ul>
@@ -261,23 +258,15 @@ h1
 
 					
 					</div>
-				</ul> -->
-					<!--<div>-->
+				</ul> 
+					<div>--> 
 						<div class = "loginbox1">
-							<?php
-							if (isset($_SESSION['userid'])) {
-							echo '<form action="includes/dlogout
-							.inc.php" method="post">
-							<button type="submit" name="logout-submit">Log out</button>
-							</form>';
-						
-						}
-						else {
-							echo '<form action="includes/dlogin.inc.php" method="post">
-							<h1>Login here (driver)</h1><br><br>
-							<p>User I\'d or Email</p>
-							<input type="text" name="mailuid" placeholder="User I\'d or Email">
-							<p>Password</p>
+							
+							<form action="header.php" method="post">
+							<h1>Change Password</h1><br><br>
+							<p>Email I'd</p>
+							<input type="text" name="mailuid" placeholder="Enter your regitered Email I'd"><br><br>
+							<!--<p>Password</p>
 							<input type="password" name="pwd" placeholder="Password">
 							<label class="label" for="clg">Location</label><br>
 
@@ -288,16 +277,17 @@ h1
   						<option value="BMS">BMS College of Architecture</option>
   						<option value="BMS">BMS College of Law</option>
   						
-						</select><br><br>
-							
-							<button type="submit" name="login-submit">Login</button><br><br>
-							</form>
-							<a href="password.php">Forgot password?</a><br><br>
-							<a href="dsignup.php">Don\'t have an account?</a>';
-							
-						}
+						</select><br><br>-->
 						
-						?>
+							<button type="submit" name="login-submit">Change Password</button><br><br>
+							<p> Password Reset link will be sent to your mail I'd</p>
+							</form>
+							<!--<a href="password.php">Forgot password?</a><br><br>
+							<a href="dsignup.php">Don\'t have an account?</a>';-->
+							
+						
+						
+						
 						</div>
 
 							

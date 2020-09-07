@@ -53,14 +53,36 @@
 
 				background-color: #ffc107;
 				border-radius: 20px;
-
+				margin-top: 40px;
 			}
+
 
 			#textcnt
 			{
 			  font-size: 40px;
 			  color:#000;
 			}
+
+			#pickup
+			{
+				border-color: #696969;
+				 border-width: 2px;
+				 border-style: solid;
+				 background: transparent;
+				 outline: none;
+				 color: #696969;
+				 height: 40px;
+				 color:#fff;
+				 font-size: 18px;
+				 border-radius: 10px;
+				 padding: 0 10px;
+
+			}
+			
+			select{
+				color:#696969;
+			}
+
 			.tab {
 			  overflow: hidden;
 			  border: none;
@@ -86,6 +108,14 @@
 			  transition: 0.3s;
 			  font-size: 17px;
 			  color:#fff;
+			}
+
+			select > option {
+				background: rgba(0.5,0.5,0.7,0.9);
+			    border:2px solid #696969;
+			    border-radius: 5px;
+			    height: 10px;
+			    color: #696969;
 			}
 
 			.tab button:hover {
@@ -151,18 +181,34 @@
 			</div>
 
 
-
+<!--  -->
 
 				<div class="booking">
 					<img src="car1.png" class="auto">
-					<form action="../swipeScreen.php"  method="POST" onclick="return validate()">
+					<form action="../swipeScreen.php"  method="POST">
 						<p>Pickup from</p>
-							<input type="text" id="pickup" name="pickup" placeholder=" Enter pickup location">
+							<select id="pickup" name="pickup" placeholder=" Enter pickup location">
+								<option disabled="disabled" selected="selected">Choose pick up location</option>
+		  						<option value="METRO">National College Metro Station</option>
+		  						<option value="RKA">Ramakrishna Ashram</option>
+		  						<option value="BMS">BMS College of Engineering</option>
+		  						<option value="BMS">BMS College of Architecture</option>
+		  						<option value="BMS">BMS College of Law</option>
+  							</select>
+							<!-- <input type="text" id="pickup" name="pickup" placeholder=" Enter pickup location"> -->
 						<p>Where to?</p>
-							<input type="text" id="drop" name="drop" placeholder=" Enter drop location"><br><br>
+							<!-- <input type="text" id="drop" name="drop" placeholder=" Enter drop location"> -->
+							<select id="pickup" name="drop" placeholder=" Enter pickup location">
+								<option disabled="disabled" selected="selected">Choose drop location</option>
+		  						<option value="METRO">National College Metro Station</option>
+		  						<option value="RKA">Ramakrishna Ashram</option>
+		  						<option value="BMS">BMS College of Engineering</option>
+		  						<option value="BMS">BMS College of Architecture</option>
+		  						<option value="BMS">BMS College of Law</option>
+  							</select>
 							<input type="hidden" id="userid" name="userid" 
 							value="<?php echo$session_userid?>"><br><br>
-						<button type="submit" class="btn btn-lg">Make yourself Available!</button>
+						<button type="submit" onclick="return validate()" class="btn btn-lg">Make yourself Available!</button>
 
 					</form>
 				</div>

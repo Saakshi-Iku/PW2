@@ -66,11 +66,17 @@ session_start();
                 <div class="swiper-slide" >
                   <div class="imgBx" >
                     <!-- <img src="./css/images1.jpg" width="300" height="300"> -->
-                     <img src="<?php
-                        if($row['USER_ID']=='tuljaram')echo'./css/f2.jpg';
-                        else if($row['USER_ID']=='Manjula')echo'./css/f1.jpg';
-                        else if($row['USER_ID']=='saakshi1')echo'./css/f3.jpg';
-                        else if($row['USER_ID']=='khushi1')echo'./css/f4.jpg';
+<!--                      <img src="<?php
+                        // if($row['USER_ID']=='tuljaram')echo'./css/f2.jpg';
+                        // else if($row['USER_ID']=='Manjula')echo'./css/f1.jpg';
+                        // else if($row['USER_ID']=='saakshi1')echo'./css/f3.jpg';
+                        // else if($row['USER_ID']=='khushi1')echo'./css/f4.jpg';
+                       ?>" width="300" height="300">  -->
+                        <img src="<?php
+                        if($row['ID']%4==0)echo'./css/f2.jpg';
+                        else if($row['ID']%4==1)echo'./css/f1.jpg';
+                        else if($row['ID']%4==2)echo'./css/f3.jpg';
+                        else if($row['ID']%4==3)echo'./css/f4.jpg';
                        ?>" width="300" height="300"> 
                   </div>
                   <input type="hidden" name="id" value="<?php  echo$row['ID']; ?>">
