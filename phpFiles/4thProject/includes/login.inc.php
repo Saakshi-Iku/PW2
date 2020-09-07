@@ -15,7 +15,7 @@ if (isset($_POST['login-submit'])) {
 		$sql = "SELECT * FROM USER_DETAILS WHERE USER_ID=? OR EMAIL=?;";
 		$stmt = mysqli_stmt_init($conn);
 		if (!mysqli_stmt_prepare($stmt, $sql)) {
-			header("Location: ../index.php?error=sqlerror");
+			header("Location: ../newLogin.php?error=sqlerror");
 			exit();
 		}
 		else {
@@ -25,7 +25,7 @@ if (isset($_POST['login-submit'])) {
 			if ($row = mysqli_fetch_assoc($result)) {
 				$pwdcheck = password_verify($password, $row['PASSWORD']);
 				if ($pwdcheck == false) {
-					header("Location: ../index.php?error=wrongpwd");
+					header("Location: ../newLogin.php?error=wrongpwd");
 					exit();
 				}
 				else if ($pwdcheck == true) {
@@ -44,12 +44,12 @@ if (isset($_POST['login-submit'])) {
 					//exit();
 				}
 				else {
-					header("Location: ../index.php?error=wrongpwd");
+					header("Location: ../newLogin.php?error=wrongpwd");
 					exit();
 				}
 			}
 			else {
-				header("Location: ../index.php?error=nouser");
+				header("Location: ../newLogin.php?error=nouser");
 				exit();
 			}
 		}
